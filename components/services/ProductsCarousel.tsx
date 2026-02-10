@@ -10,7 +10,8 @@ const products = [
     tagline: 'Digital menu & table ordering',
     description: 'Revolutionary digital menu solution replacing costly POS systems—scan, order, pay directly from tables.',
     href: 'https://scananddine-tau.vercel.app/',
-    bgColor: '#3E3232',
+    bgColor: '#FFFFFF', // Set background color to white
+    textColor: '#8B4513', // Set text color to brown
   },
   {
     id: 'e-catalog',
@@ -18,7 +19,8 @@ const products = [
     tagline: 'Coming Soon — B2B catalog & ordering',
     description: 'Private digital ordering & credit platform for wholesalers. Own your brand, data, and relationships—not a marketplace.',
     href: '/products/e-catalog',
-    bgColor: '#503C3C',
+    bgColor: '#FFFFFF', // Set background color to white
+    textColor: '#8B4513', // Set text color to brown
   },
   {
     id: 'paysync',
@@ -26,7 +28,8 @@ const products = [
     tagline: 'Global invoicing & billing',
     description: 'Global invoicing software for frictionless billing across currencies and compliance standards.',
     href: '/products/paysync',
-    bgColor: '#7E6363',
+    bgColor: '#FFFFFF', // Set background color to white
+    textColor: '#8B4513', // Set text color to brown
   }
 ]
 
@@ -52,21 +55,22 @@ export default function ProductsCarousel() {
               `}
             >
               <div className="relative p-8 md:p-10">
-                <h3 className="font-[family-name:var(--font-halant)] text-3xl md:text-4xl font-normal text-white mb-2">
+                <h3 className="font-[family-name:var(--font-halant)] text-3xl md:text-4xl font-normal" style={{ color: product.textColor }}>
                   {product.title}
                 </h3>
                 
-                <p className="text-sm text-white/70 mb-4 font-medium">
+                <p className="text-sm mb-4 font-medium" style={{ color: `${product.textColor}B3` }}>
                   {product.tagline}
                 </p>
                 
-                <p className="text-lg text-white/80 leading-relaxed mb-6">
+                <p className="text-lg leading-relaxed mb-6" style={{ color: `${product.textColor}CC` }}>
                   {product.description}
                 </p>
                 
                 <Link
                   href={product.href}
-                  className="inline-flex items-center gap-3 text-white font-medium group pb-1 border-b border-white/20 hover:border-white transition-all duration-300"
+                  className="inline-flex items-center gap-3 font-medium group pb-1 border-b border-white/20 hover:border-white transition-all duration-300"
+                  style={{ color: product.textColor }}
                 >
                   <span>View Product</span>
                   <div className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1">
@@ -95,21 +99,19 @@ export default function ProductsCarousel() {
                   style={{ backgroundColor: product.bgColor }}
                 >
                   <div className="relative p-6">
-                    <h3 className="font-[family-name:var(--font-halant)] text-2xl md:text-3xl font-normal text-white mb-2">
+                    <h3 className="font-[family-name:var(--font-halant)] text-2xl md:text-3xl font-normal" style={{ color: product.textColor }}>
                       {product.title}
                     </h3>
-                    
-                    <p className="text-sm text-white/70 mb-4 font-medium">
+                    <p className="text-sm mb-4 font-medium" style={{ color: `${product.textColor}B3` }}>
                       {product.tagline}
                     </p>
-                    
-                    <p className="text-base text-white/80 mb-6 leading-relaxed">
+                    <p className="text-base mb-6 leading-relaxed" style={{ color: `${product.textColor}CC` }}>
                       {product.description}
                     </p>
-                    
                     <Link
                       href={product.href}
-                      className="inline-flex items-center gap-3 text-white font-medium group pb-1 border-b border-white/20 hover:border-white transition-all duration-300"
+                      className="inline-flex items-center gap-3 font-medium group pb-1 border-b border-white/20 hover:border-white transition-all duration-300"
+                      style={{ color: product.textColor }}
                     >
                       <span>View Product</span>
                       <div className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1">
